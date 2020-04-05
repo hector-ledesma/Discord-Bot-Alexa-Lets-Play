@@ -2,7 +2,7 @@ import discord
 import os
 from discord.ext import commands
 
-token = 'oopsie. Always remember to hide your token kids!'
+token = 'oopsie. Always remember to hide your token kids!!'
 
 discord = commands.Bot(command_prefix = '.')
 
