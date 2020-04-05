@@ -1,8 +1,8 @@
 import discord
 import os
+import token
 from discord.ext import commands
-
-token = 'oopsie. Always remember to hide your token kids!!'
+from token import *
 
 discord = commands.Bot(command_prefix = '.')
 
