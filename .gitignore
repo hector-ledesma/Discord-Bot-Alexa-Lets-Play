@@ -4,6 +4,7 @@
 
 ### Personal ignores ###
 token.py
+discordToken.py
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
