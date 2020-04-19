@@ -1,0 +1,10 @@
+<!-- Flask uses Jinja for handling templates. This file serves as the base for all others. -->
+<!DOCTYPE html>
+<head>
+    {% block head %}{% endblock %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    {% block body %}{% endblock %}
+</body>
+</html>
