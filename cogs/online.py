@@ -1,12 +1,9 @@
 import discord
 import aiohttp
 import asyncio
-import flask_socketio   import SocketIO, emit, send
 from discord.ext        import commands
 
 class Online(commands.Cog):
-
-    socketio
 
     def __init__(self, discord):
         self.discord = discord

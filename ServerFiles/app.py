@@ -1,8 +1,7 @@
 #We have to import all library functions that we will want to use.
 from flask          import Flask, render_template, url_for, request, redirect, abort, jsonify
 from flask_socketio import SocketIO, emit, send
-import eventlet
-eventlet.monkey_patch()
+from socketio import Namespace
 #Flask is the class template that we will instantiate.
 #Request lets us handle differnet HTTP Methods to the same route.
 
@@ -15,6 +14,9 @@ app = Flask(__name__)
 socketio = SocketIO(app)
 clients = []
 
+# GLOBAL PROPERTY -------------
+# do_something = False
+
 # FLASK ---------------------------
 
 @app.route('/', methods=[post, get])
@@ -23,7 +25,6 @@ def welcome():
         print('Hello world!')
     
     return render_template('index.html')
-
 
 @socketio.on('connect')
 def handle_connect():
