@@ -16,19 +16,6 @@
     });
 </script>
 
-<script type=text/javascript>
-console.log('we in second socket.')
-    var socket = io()
-    socket.on('my response', function(json) {
-        console.log('second socket gets triggered.')
-        $('#response').text(json.data);
-        console.log('received json: ' + json.data);
-    });
-    socket.on('handle alexa', function(ms) {
-        console.log('third socket triggered.');
-    });
-</script>
-
 {% endblock %}
 
 {% block body %}
